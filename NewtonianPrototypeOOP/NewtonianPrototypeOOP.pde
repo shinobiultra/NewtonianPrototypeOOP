@@ -2,7 +2,7 @@ ArrayList<Planet> planets;
 Selector selector;
 
 
-float G = 0.01;
+float G = 0.001;
 float distThreshold = 50;
 void setup() {
   size(1280, 720);
@@ -12,13 +12,13 @@ void setup() {
 }
 
 void draw() {
-  background(24, 24, 81); 
+  background(240, 240,255); 
   
-  selector.display();
   for(Planet planet : planets){
     planet.calculateVelocity(planets);
     planet.render(); 
   }
+  selector.display();
 }
 
 void mouseWheel(MouseEvent event) {

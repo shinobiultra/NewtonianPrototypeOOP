@@ -12,7 +12,8 @@ class Selector {
      position.y = mouseY;
      
      noFill();
-     stroke(255);
+     color actColor = get(mouseX, mouseY);
+     stroke(255-red(actColor), 255-green(actColor), 255-blue(actColor));
      ellipse(position.x, position.y, dimensions.x, dimensions.y);
   }
 }
